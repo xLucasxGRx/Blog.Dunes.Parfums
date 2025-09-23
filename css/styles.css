@@ -1,0 +1,487 @@
+/* ============================================= */
+/* === 1. ESTILOS GENERALES Y TIPOGRAFÍA === */
+/* (Se aplican a TODO el sitio web) */
+/* ============================================= */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #007bff;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================= */
+/* === 2. HEADER (El mismo para todas las páginas) === */
+/* ============================================= */
+.site-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    height: 80px; /* Ajusta la altura de tu logo */
+}
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+.main-navigation a {
+    font-weight: 600;
+    font-size: 1rem;
+}
+.main-navigation a.active {
+    color: #007bff;
+}
+
+/* ============================================= */
+/* === 3. ESTILOS DE LA PÁGINA PRINCIPAL (index.html) === */
+/* ============================================= */
+
+/* --- Post Destacado (Hero) --- */
+.featured-post {
+    height: 60vh;
+    min-height: 450px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+}
+.featured-post-overlay {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+.featured-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+.featured-content h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    line-height: 1.2;
+    color: #fff;
+}
+.featured-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    color: #fff;
+}
+.hero-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.hero-btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* --- Sección Sobre Nosotros --- */
+.about-us {
+    background-color: #fff;
+    padding: 60px 0;
+}
+.about-us-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.about-text h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* --- Sección CTA (Comprar Ahora) --- */
+.cta-section {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.cta-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+.cta-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.cta-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- Cuadrícula de Entradas Recientes --- */
+.latest-posts {
+    padding: 60px 0;
+}
+.latest-posts h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.post-image-link img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px;
+}
+.category-tag {
+    display: inline-block;
+    background-color: #e83e8c;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+.card-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* --- Sección de Testimonios --- */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.testimonial-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+.quote-text {
+    font-style: italic;
+    color: #555;
+    margin: 0 0 20px 0;
+}
+.quote-text::before {
+    content: '“';
+    display: block;
+    font-size: 3rem;
+    color: #ddd;
+    line-height: 1;
+}
+.quote-author {
+    font-weight: bold;
+}
+
+/* ============================================= */
+/* === 4. ESTILOS DE LA PÁGINA DE CATÁLOGO === */
+/* ============================================= */
+.catalog-main {
+    padding: 40px 0;
+}
+.category-header {
+    background-color: #6b4f3a;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.category-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 20px 15px;
+}
+.product-name-tag {
+    background-color: #222;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.product-image img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+    margin: 15px auto;
+}
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 15px;
+    text-align: left;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* ============================================= */
+/* === 5. ESTILOS DE LA PÁGINA DE CONTACTO === */
+/* ============================================= */
+.contact-page-body {
+    background-color: #F5F0E9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.link-in-bio-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+    flex-grow: 1; 
+}
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.link-card {
+    display: flex;
+    align-items: center;
+    background-color: #FDFBF7;
+    border: 1px solid #EAE2D8;
+    border-radius: 50px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+.link-card:hover {
+    transform: scale(1.03);
+    color: #333;
+}
+.link-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.link-text {
+    flex-grow: 1;
+    text-align: left;
+    font-weight: 600;
+}
+.link-options {
+    color: #aaa;
+    font-weight: bold;
+}
+
+/* ============================================= */
+/* === 6. FOOTER (El mismo para todas las páginas) === */
+/* ============================================= */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #222;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+/* ============================================= */
+/* === 7. ESTILOS RESPONSIVOS (PARA MÓVILES) === */
+/* ============================================= */
+@media (max-width: 992px) {
+    .posts-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-content h1 { font-size: 2rem; }
+}
+@media (max-width: 768px) {
+    .posts-grid,
+    .testimonials-grid,
+    .about-us-content {
+        grid-template-columns: 1fr;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ============================================= */
+/* === ESTILOS PARA LA PÁGINA "SOBRE NOSOTROS" === */
+/* ============================================= */
+.page-header {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.page-header p {
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.story-content {
+    padding: 60px 0;
+}
+.story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+/* Invierte el orden para la segunda sección */
+.story-section.reverse {
+    grid-template-columns: 1fr 1fr; /* Mantenemos la misma estructura, pero el HTML está invertido */
+}
+.story-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.story-text h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+.story-text p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Hacemos responsiva la página de historia */
+@media (max-width: 768px) {
+    .story-section,
+    .story-section.reverse {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+    .story-section.reverse .story-image {
+        grid-row: 1; /* Aseguramos que la imagen siempre vaya primero en móvil */
+    }
+}
