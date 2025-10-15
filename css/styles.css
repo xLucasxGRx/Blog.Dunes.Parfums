@@ -1,7 +1,4 @@
-/* ============================================= */
-/* === 1. ESTILOS GENERALES Y TIPOGRAFÍA === */
-/* (Se aplican a TODO el sitio web) */
-/* ============================================= */
+/* === ESTILOS GENERALES Y TIPOGRAFÍA === */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
@@ -28,9 +25,7 @@ img {
     display: block;
 }
 
-/* ============================================= */
-/* === 2. HEADER (El mismo para todas las páginas) === */
-/* ============================================= */
+/* === HEADER === */
 .site-header {
     background-color: #fff;
     padding: 15px 0;
@@ -46,7 +41,7 @@ img {
     align-items: center;
 }
 .logo img {
-    height: 80px; /* Ajusta la altura de tu logo */
+    height: 80px; 
 }
 .main-navigation ul {
     list-style: none;
@@ -63,11 +58,9 @@ img {
     color: #007bff;
 }
 
-/* ============================================= */
-/* === 3. ESTILOS DE LA PÁGINA PRINCIPAL (index.html) === */
-/* ============================================= */
+/* === ESTILOS DE LA PÁGINA PRINCIPAL === */
 
-/* --- Post Destacado (Hero) --- */
+/* --- Post Destacado --- */
 .featured-post {
     height: 60vh;
     min-height: 450px;
@@ -157,7 +150,7 @@ img {
     color: #fff;
 }
 
-/* --- Sección CTA (Comprar Ahora) --- */
+/* --- Sección Comprar Ahora --- */
 .cta-section {
     background-color: #222;
     color: #fff;
@@ -191,59 +184,75 @@ img {
     transform: translateY(-2px);
 }
 
-/* --- Cuadrícula de Entradas Recientes --- */
-.latest-posts {
-    padding: 60px 0;
+/* --- Cuadrícula Tips de Perfumería --- */
+.latest-posts { 
+    padding: 
+    60px 0; 
 }
-.latest-posts h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 40px;
+.latest-posts h2 { 
+    text-align: center; 
+    font-size: 2rem; 
+    margin-top: 0; 
+    margin-bottom: 40px; 
 }
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.posts-grid { 
+    display: grid; 
+    grid-template-columns: 
+    repeat(3, 1fr); 
+    gap: 30px; 
 }
-.post-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.post-card { 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px 
+    rgba(0,0,0,0.08); 
+    overflow: hidden; 
 }
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+.post-image-container img { 
+    height: 200px; 
+    width: 100%; 
+    object-fit: cover; 
 }
-.post-image-link img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+.card-content { 
+    padding: 20px; 
 }
-.card-content {
-    padding: 20px;
-}
-.category-tag {
-    display: inline-block;
-    background-color: #e83e8c;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+.category-tag { 
+    display: inline-block; 
+    background-color: #e83e8c; 
+    color: #fff; 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
 }
 .card-content h3 {
     margin: 0 0 10px 0;
     font-size: 1.25rem;
     line-height: 1.4;
+    text-align: left;
 }
-.card-content p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #555;
+.card-content p { 
+    margin: 0; 
+    font-size: 0.95rem; 
+    color: #555; 
+}
+
+.testimonials-section { 
+    padding: 60px 0; 
+    background-color: #fff; 
+    border-top: 1px solid #eee; 
+}
+.testimonials-section h2 { 
+    text-align: center; 
+    font-size: 2rem; 
+    margin-top: 0; 
+    margin-bottom: 40px;
+}
+.testimonials-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
 }
 
 /* --- Sección de Testimonios --- */
@@ -286,9 +295,7 @@ img {
     font-weight: bold;
 }
 
-/* ============================================= */
-/* === 4. ESTILOS DE LA PÁGINA DE CATÁLOGO === */
-/* ============================================= */
+/* === ESTILOS DE LA PÁGINA DE CATÁLOGO === */
 .catalog-main {
     padding: 40px 0;
 }
@@ -343,9 +350,7 @@ img {
     border-top: 1px solid #eee;
 }
 
-/* ============================================= */
-/* === 5. ESTILOS DE LA PÁGINA DE CONTACTO === */
-/* ============================================= */
+/* === ESTILOS DE LA PÁGINA DE CONTACTO === */
 .contact-page-body {
     background-color: #F5F0E9;
     display: flex;
@@ -394,9 +399,7 @@ img {
     font-weight: bold;
 }
 
-/* ============================================= */
-/* === 6. FOOTER (El mismo para todas las páginas) === */
-/* ============================================= */
+/* === FOOTER === */
 .footer {
     text-align: center;
     padding: 30px 0;
@@ -405,9 +408,8 @@ img {
     margin-top: 40px;
 }
 
-/* ============================================= */
-/* === 7. ESTILOS RESPONSIVOS (PARA MÓVILES) === */
-/* ============================================= */
+/* === ESTILOS RESPONSIVOS === */
+
 @media (max-width: 992px) {
     .posts-grid,
     .testimonials-grid {
@@ -427,10 +429,7 @@ img {
     }
 }
 
-
-/* ============================================= */
 /* === ESTILOS PARA LA PÁGINA "SOBRE NOSOTROS" === */
-/* ============================================= */
 .page-header {
     background-color: #f4f4f4;
     text-align: center;
@@ -457,9 +456,9 @@ img {
     align-items: center;
     margin-bottom: 60px;
 }
-/* Invierte el orden para la segunda sección */
+
 .story-section.reverse {
-    grid-template-columns: 1fr 1fr; /* Mantenemos la misma estructura, pero el HTML está invertido */
+    grid-template-columns: 1fr 1fr;
 }
 .story-image {
     width: 100%;
@@ -479,9 +478,9 @@ img {
 @media (max-width: 768px) {
     .story-section,
     .story-section.reverse {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        grid-template-columns: 1fr;
     }
     .story-section.reverse .story-image {
-        grid-row: 1; /* Aseguramos que la imagen siempre vaya primero en móvil */
+        grid-row: 1;
     }
 }
