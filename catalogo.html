@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Dunes Parfums</title>
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
@@ -22,6 +23,11 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            <!-- Icono del Carrito de Compras -->
+            <div class="cart-icon-container">
+            <img src="img/carrito.png" alt="Carrito de Compras" class="cart-icon">
+            <span id="cart-counter" class="cart-counter">0</span>
+            </div>
         </div>
     </header>
 
@@ -34,65 +40,113 @@
                 </div>
                 <div class="product-grid">
                     <!-- Producto 1: Afnan 9 PM -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Afnan 9 PM</div>
-                        <div class="product-image"><img src="img/9pm.jpeg" alt="Afnan 9 PM"></div>
-                        <div class="product-price">S/ 179</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Afnan 9 PM"
+                    data-price="S/ 179"
+                    data-img="img/9pm.jpeg"
+                    data-desc="Una fragancia dulce y seductora con notas de vainilla, ámbar y manzana. Perfecta para salidas nocturnas y ocasiones especiales."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+    
+                <div class="product-name-tag">Afnan 9 PM</div>
+                <div class="product-image"><img src="img/9pm.jpeg" alt="Afnan 9 PM"></div>
+                <div class="product-price">S/ 179</div>
+                <div class="product-details">
+                    <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                    <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 2: Afnan 9 PM Rebel -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Afnan 9 PM Rebel</div>
-                        <div class="product-image"><img src="img/REBEL 2.jpeg" alt="Afnan 9 PM Rebel"></div>
-                        <div class="product-price">S/ 219</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Afnan 9 PM Rebel"
+                    data-price="S/ 219"
+                    data-img="img/REBEL 2.jpeg"
+                    data-desc="Una versión más intensa y oscura del original, con notas de cuero y especias."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+    
+                    <div class="product-name-tag">Afnan 9 PM Rebel</div>
+                    <div class="product-image"><img src="img/REBEL 2.jpeg" alt="Afnan 9 PM Rebel"></div>
+                    <div class="product-price">S/ 219</div>
+                    <div class="product-details">
+                        <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 3: Afnan 9 AM Dive -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Afnan 9 PM Rebel</div>
-                        <div class="product-image"><img src="img/9AM.jpeg" alt="Afnan 9 AM Dive"></div>
-                        <div class="product-price">S/ 185</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Afnan 9 AM Dive"
+                    data-price="185"
+                    data-img="img/9AM.jpeg"
+                    data-desc="Una fragancia vibrante y acuática, perfecta para el día a día. Con notas frescas de limón y menta, complementadas con un corazón de manzana y un fondo amaderado."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Afnan 9 AM Dive</div>
+                    <div class="product-image"><img src="img/9AM.jpeg" alt="Afnan 9 AM Dive"></div>
+                    <div class="product-price">S/ 185</div>
+                    <div class="product-details">
+                        <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 4: Afnan 9 PM ELIXIR -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Afnan 9 PM elixir</div>
-                        <div class="product-image"><img src="img/9PM elixir.jpeg" alt="Afnan 9 PM ELIXIR"></div>
-                        <div class="product-price">S/ 229</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Afnan 9 PM Elixir"
+                    data-price="229"
+                    data-img="img/9PM elixir.jpeg"
+                    data-desc="La versión Elixir eleva la apuesta con una mayor concentración y profundidad. Notas intensificadas de pimienta negra, lavanda y un fondo robusto de pachulí y vainilla."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Afnan 9 PM Elixir</div>
+                    <div class="product-image"><img src="img/9PM elixir.jpeg" alt="Afnan 9 PM ELIXIR"></div>
+                    <div class="product-price">S/ 229</div>
+                    <div class="product-details">
+                        <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 5: Armaf Club de Nuit Intense Man -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armaf Club de Nuit Intense Man</div>
-                        <div class="product-image"><img src="img/Armaf Club de Nuit Intense Man EDT.jpeg" alt="Armaf Club de Nuit Intense Man"></div>
-                        <div class="product-price">S/ 195</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Armaf Club de Nuit Intense Man"
+                    data-price="195"
+                    data-img="img/Armaf Club de Nuit Intense Man EDT.jpeg"
+                    data-desc="Considerado un ícono en la perfumería, esta fragancia abre con una explosión cítrica de limón y piña, seguida de un corazón ahumado de abedul y un fondo masculino de almizcle y ámbar gris."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armaf Club de Nuit Intense Man</div>
+                    <div class="product-image"><img src="img/Armaf Club de Nuit Intense Man EDT.jpeg" alt="Armaf Club de Nuit Intense Man"></div>
+                    <div class="product-price">S/ 195</div>
+                    <div class="product-details">
+                        <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 6: Armaf Club de Nuit Sillage -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armaf Club de Nuit Sillage</div>
-                        <div class="product-image"><img src="img/Armaf Club de Nuit Sillage.jpeg" alt="Armaf Club de Nuit Sillage"></div>
-                        <div class="product-price">S/ 199</div>
-                        <div class="product-details">
-                            <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable" 
+                    data-name="Armaf Club de Nuit Sillage"
+                    data-price="199"
+                    data-img="img/Armaf Club de Nuit Sillage.jpeg"
+                    data-desc="Una fragancia unisex fresca y metálica que evoca un arroyo de montaña. Abre con notas cítricas de bergamota y limón, con un corazón de flores blancas y un fondo limpio de almizcle y ambroxan."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armaf Club de Nuit Sillage</div>
+                    <div class="product-image"><img src="img/Armaf Club de Nuit Sillage.jpeg" alt="Armaf Club de Nuit Sillage"></div>
+                    <div class="product-price">S/ 199</div>
+                    <div class="product-details">
+                        <span class="detail-label">Árabe</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                 </div>
             </section>
 
@@ -103,68 +157,115 @@
                 </div>
                 <div class="product-grid">
                     <!-- Producto 1: Azzaro The Most Wanted -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Azzaro The Most Wanted Intense</div>
-                        <div class="product-image"><img src="img/Azzaro The Most Wanted Intense.png" alt="Azzaro The Most Wanted Intense"></div>
-                        <div class="product-price">S/ 389</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable"
+                    data-name="Azzaro The Most Wanted Intense"
+                    data-price="389"
+                    data-img="img/Azzaro The Most Wanted Intense.png"
+                    data-desc="Una fragancia ambarina y especiada para el hombre que se atreve a todo. La calidez del cardamomo se mezcla con un adictivo acorde de toffee y un fondo de madera ambarina, creando un aroma irresistible y duradero."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Azzaro The Most Wanted Intense</div>
+                    <div class="product-image"><img src="img/Azzaro The Most Wanted Intense.png" alt="Azzaro The Most Wanted Intense"></div>
+                    <div class="product-price">S/ 389</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 2: Armani Acqua di Giò -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armani Acqua di Giò</div>
-                        <div class="product-image"><img src="img/Armani Acqua di Giò.jpg" alt="Armani Acqua di Giò"></div>
-                        <div class="product-price">S/ 529</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable"
+                    data-name="Armani Acqua di Giò"
+                    data-price="529"
+                    data-img="img/Armani Acqua di Giò.jpg"
+                    data-desc="Un clásico atemporal que captura la esencia del Mediterráneo. Frescas notas marinas se entrelazan con la bergamota de Calabria y el cedro para crear una fragancia acuática y profundamente masculina."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armani Acqua di Giò</div>
+                    <div class="product-image"><img src="img/Armani Acqua di Giò.jpg" alt="Armani Acqua di Giò"></div>
+                    <div class="product-price">S/ 529</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 2: Armani Acqua di Giò Profondo -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armani Acqua di Giò Profondo</div>
-                        <div class="product-image"><img src="img/Armani Acqua di Giò Profondo.jpg" alt="Armani Acqua di Giò Profondo"></div>
-                        <div class="product-price">S/ 489</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 1: Azzaro The Most Wanted -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Azzaro The Most Wanted</div>
-                        <div class="product-image"><img src="img/Azzaro The Most Wanted Parfum.jpg" alt="Azzaro The Most Wanted"></div>
-                        <div class="product-price">S/ 439</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 2: Armani Stronger With You Absolutely -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armani Stronger With You Absolutely</div>
-                        <div class="product-image"><img src="img/Armani Stronger With You Absolutely.jpg" alt="Armani Stronger With You Absolutely"></div>
-                        <div class="product-price">S/ 465</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 2: Armani Stronger With You Intensely -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Armani Stronger With You Intensely</div>
-                        <div class="product-image"><img src="img/Armani Stronger With You Intensely.jpg" alt="Armani Stronger With You Intensely"></div>
-                        <div class="product-price">S/ 449</div>
-                        <div class="product-details">
-                            <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable"
+                    data-name="Armani Acqua di Giò Profondo"
+                    data-price="489"
+                    data-img="img/Armani Acqua di Giò Profondo.jpg"
+                    data-desc="Una inmersión en las profundidades del mar. Esta intensa interpretación de Acqua di Giò combina notas marinas con esencias aromáticas de ciprés y lavanda sobre un fondo mineral y amaderado de pachulí."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armani Acqua di Giò Profondo</div>
+                    <div class="product-image"><img src="img/Armani Acqua di Giò Profondo.jpg" alt="Armani Acqua di Giò Profondo"></div>
+                    <div class="product-price">S/ 489</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 3: Azzaro The Most Wanted -->
+                <article class="product-card clickable"
+                    data-name="Azzaro The Most Wanted Parfum"
+                    data-price="439"
+                    data-img="img/Azzaro The Most Wanted Parfum.jpg"
+                    data-desc="Intenso y carismático. Esta versión Parfum se destaca por una apertura picante de jengibre, un corazón de maderas vibrantes y un fondo licoroso y dulce de vainilla Bourbon. Una fragancia para dejar huella."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Azzaro The Most Wanted</div>
+                    <div class="product-image"><img src="img/Azzaro The Most Wanted Parfum.jpg" alt="Azzaro The Most Wanted"></div>
+                    <div class="product-price">S/ 439</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 4: Armani Stronger With You Absolutely -->
+                <article class="product-card clickable"
+                    data-name="Armani Stronger With You Absolutely"
+                    data-price="465"
+                    data-img="img/Armani Stronger With You Absolutely.jpg"
+                    data-desc="La versión más adictiva y licorosa de la línea. Un acorde de ron embriagador se combina con la dulzura de la vainilla y la calidez de la castaña glaseada, creando una estela absolutamente irresistible y sensual."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armani Stronger With You Absolutely</div>
+                    <div class="product-image"><img src="img/Armani Stronger With You Absolutely.jpg" alt="Armani Stronger With You Absolutely"></div>
+                    <div class="product-price">S/ 465</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 5: Armani Stronger With You Intensely -->
+                <article class="product-card clickable"
+                    data-name="Armani Stronger With You Intensely"
+                    data-price="449"
+                    data-img="img/Armani Stronger With You Intensely.jpg"
+                    data-desc="Una fragancia oriental y gourmand irresistiblemente intensa. Combina notas de pimienta rosa y canela con un corazón de toffee acaramelado, sobre un fondo cálido de vainilla y ámbar. Perfecta para quienes buscan dejar una impresión memorable."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Armani Stronger With You Intensely</div>
+                    <div class="product-image"><img src="img/Armani Stronger With You Intensely.jpg" alt="Armani Stronger With You Intensely"></div>
+                    <div class="product-price">S/ 449</div>
+                    <div class="product-details">
+                        <span class="detail-label">Diseñador</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                 </div>
             </section>
-
             <!-- ============================================= -->
             <!-- === NUEVA SECCIÓN DE PERFUMES NICHO === -->
             <!-- ============================================= -->
@@ -174,65 +275,113 @@
                 </div>
                 <div class="product-grid">
                     <!-- Producto 1: Xerjoff Erba Pura -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Xerjoff Erba Pura</div>
-                        <div class="product-image"><img src="img/erba pura.jpeg" alt="Xerjoff Erba Pura"></div>
-                        <div class="product-price">S/ 889</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable"
+                    data-name="Xerjoff Erba Pura"
+                    data-price="889"
+                    data-img="img/erba pura.jpeg"
+                    data-desc="Una explosión de frutas mediterráneas y cítricos sicilianos sobre una base sensual de ámbar y almizcle blanco. Erba Pura es una fragancia opulenta, moderna y de una duración excepcional."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Xerjoff Erba Pura</div>
+                    <div class="product-image"><img src="img/erba pura.jpeg" alt="Xerjoff Erba Pura"></div>
+                    <div class="product-price">S/ 889</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
                     <!-- Producto 2: Xerjoff Erba Gold -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Xerjoff Erba Gold</div>
-                        <div class="product-image"><img src="img/Xerjoff Erba Gold.jpg" alt="Xerjoff Erba Gold"></div>
-                        <div class="product-price">S/ 980</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 2: Bharara King -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Bharara King</div>
-                        <div class="product-image"><img src="img/Bharara King.png" alt="Bharara King"></div>
-                        <div class="product-price">S/ 980</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 1: Bharara Niche -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Bharara Niche</div>
-                        <div class="product-image"><img src="img/Bharara Niche.jpg" alt="Bharara Niche"></div>
-                        <div class="product-price">S/ 299</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 2: Bharara Chocolate -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Bharara Chocolate</div>
-                        <div class="product-image"><img src="img/Bharara Chocolate.jpg" alt="Bharara Chocolate"></div>
-                        <div class="product-price">S/ 319</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
-                        </div>
-                    </article>
-                    <!-- Producto 2:Bharara Gold Edition -->
-                    <article class="product-card">
-                        <div class="product-name-tag">Bharara Gold Edition</div>
-                        <div class="product-image"><img src="img/Bharara Gold Edition.jpeg" alt="Bharara Gold Edition"></div>
-                        <div class="product-price">S/ 329</div>
-                        <div class="product-details">
-                            <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
-                            <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
-                        </div>
-                    </article>
+                <article class="product-card clickable"
+                    data-name="Xerjoff Erba Gold"
+                    data-price="980"
+                    data-img="img/Xerjoff Erba Gold.jpg"
+                    data-desc="Una edición especial y lujosa de la icónica Erba Pura. Erba Gold abre con una nota picante de jengibre y cítricos, que da paso a un corazón frutal y especiado. La base de almizcle, ámbar y vainilla le da un toque aún más cálido y envolvente."
+                    data-type="Eau de Parfum"
+                    data-size="125ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Xerjoff Erba Gold</div>
+                    <div class="product-image"><img src="img/Xerjoff Erba Gold.jpg" alt="Xerjoff Erba Gold"></div>
+                    <div class="product-price">S/ 980</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 3: Bharara King -->
+                <article class="product-card clickable"
+                    data-name="Bharara King"
+                    data-price="980"
+                    data-img="img/Bharara King.png"
+                    data-desc="Una fragancia poderosa y moderna que irradia confianza. Bharara King es famoso por su explosión de notas frutales y cítricas, balanceadas sobre un fondo cálido de ámbar y almizcle. Su increíble proyección y duración lo convierten en un perfume que no pasa desapercibido."
+                    data-type="Eau de Parfum"
+                    data-size="125ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Bharara King</div>
+                    <div class="product-image"><img src="img/Bharara King.png" alt="Bharara King"></div>
+                    <div class="product-price">S/ 980</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 4: Bharara Niche -->
+                <article class="product-card clickable"
+                    data-name="Bharara Niche"
+                    data-price="299"
+                    data-img="img/Bharara Niche.jpg"
+                    data-desc="Una fragancia exclusiva que se desmarca de lo convencional. Bharara Niche combina notas exóticas y especiadas con un fondo amaderado, creando un aroma distintivo y sofisticado para quienes buscan originalidad."
+                    data-type="Eau de Parfum"
+                    data-size="100ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Bharara Niche</div>
+                    <div class="product-image"><img src="img/Bharara Niche.jpg" alt="Bharara Niche"></div>
+                    <div class="product-price">S/ 299</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">100ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 5: Bharara Chocolate -->
+                <article class="product-card clickable"
+                    data-name="Bharara Chocolate"
+                    data-price="319"
+                    data-img="img/Bharara Chocolate.jpg"
+                    data-desc="Una delicia gourmand para los sentidos. Esta fragancia captura el aroma rico y cremoso del chocolate oscuro, mezclado con toques de vainilla y especias. Es un perfume cálido, reconfortante y absolutamente adictivo."
+                    data-type="Eau de Parfum"
+                    data-size="125ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Bharara Chocolate</div>
+                    <div class="product-image"><img src="img/Bharara Chocolate.jpg" alt="Bharara Chocolate"></div>
+                    <div class="product-price">S/ 319</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
+                    </div>
+                </article>
+                    <!-- Producto 6:Bharara Gold Edition -->
+                <article class="product-card clickable"
+                    data-name="Bharara Gold Edition"
+                    data-price="329"
+                    data-img="img/Bharara Gold Edition.jpeg"
+                    data-desc="La opulencia hecha fragancia. Bharara Gold Edition es una composición rica y lujosa que combina notas orientales con un corazón floral y una base de maderas preciosas y ámbar. Un perfume para ocasiones especiales que irradia elegancia."
+                    data-type="Eau de Parfum"
+                    data-size="125ml"
+                    onclick="openModal(this)">
+                    
+                    <div class="product-name-tag">Bharara Gold Edition</div>
+                    <div class="product-image"><img src="img/Bharara Gold Edition.jpeg" alt="Bharara Gold Edition"></div>
+                    <div class="product-price">S/ 329</div>
+                    <div class="product-details">
+                        <span class="detail-label">Nicho</span><span class="detail-value">Eau de Parfum</span>
+                        <span class="detail-label">Tamaño</span><span class="detail-value">125ml</span>
+                    </div>
+                </article>
                 </div>
             </section>
 
@@ -244,6 +393,54 @@
             <p>&copy; 2025 Dunes Parfums. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <!-- ============================================= -->
+    <!-- === VENTANA MODAL PARA DETALLES DE PRODUCTO === -->
+    <!-- ============================================= -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Imagen del producto">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-name">Nombre del Perfume</h2>
+                    <p class="modal-price" id="modal-price">S/ 000</p>
+                    <div class="details-section">
+                        <h3>Descripción</h3>
+                        <p id="modal-desc">Aquí va la descripción detallada del aroma, sus notas y la experiencia que ofrece.</p>
+                    </div>
+                    <div class="details-section">
+                        <h3>Detalles</h3>
+                        <ul>
+                            <li id="modal-type"><strong>Tipo:</strong> Eau de Parfum</li>
+                            <li id="modal-size"><strong>Tamaño:</strong> 100ml</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-cart-btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================= -->
+    <!-- === VENTANA MODAL PARA EL CARRITO DE COMPRAS === -->
+    <!-- ============================================= -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close-cart-button">&times;</span>
+            <h2>Mi Carrito</h2>
+            <div id="cart-items-container">
+                <!-- Los productos del carrito se añadirán aquí -->
+                <p class="cart-empty-message">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-summary">
+                <p class="cart-total">Total: <span id="cart-total-price">S/ 0</span></p>
+                <a id="checkout-btn" class="checkout-btn disabled" href="#" target="_blank">Finalizar Compra por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+        <script src="js/script.js"></script>
+
 
 </body>
 </html>
